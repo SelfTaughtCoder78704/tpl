@@ -1,0 +1,105 @@
+***** Actions *****
+**********************
+
+The Actions takes in the following properties:
+_________________________________________________
+
+id                                  --> the CSS ID,
+classes                             --> the CSS classes in string format with spaces,
+actions                             --> a list of objects,  :::::::::::::::::::::::::::::::::::::
+actionIsCarousel                    --> a boolean value,                                     ::::
+actionSlideType                     --> type of slider (default is 'carousel'),              ::::
+bullets                             --> a boolean value,                                     ::::
+arrows                              --> a boolean value,                                     ::::
+perView                             --> number of slides to be shown,                        ::::
+focusAt                             --> index of the slide to be focused (default is 0),     ::::
+titleBlock                          --> a boolean value,                                     ::::
+titleBlockTitle                     --> the title of the title block,                        ::::
+titleBlockText                      --> the text of the title block,                         ::::
+titleFinePrint                      --> the text of the fine print,                      :::::::::::::
+                                                                                            :::::::
+                                                                                              :::
+__________________________________________________________________________________________________________________
+
+
+
+
+ACTIONS JSON OBJECT EXAMPLE FOR actions PROPERTY of ACTIONS BLOCK:
+
+ "actions": [  <-----------  list of actions  ------------> 
+
+        {
+          "index": 0,
+          "title": "Go to the first page",  
+          "text": "First page",
+          "clickable": true,
+          "list": true,
+          "ctaBlock": true,
+          "ctaText": "Go to the first page",
+          "ctaLink": "/bangbang",
+          "mediaBlock": true,
+          "isCarousel": false,
+          "finePrint": "Fine Print",
+          "listItems": [
+            {
+              "text": "First list item",
+              "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+            },
+            {
+              "text": "Second list item",
+              "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+            },
+            {
+              "text": "Third list item",
+              "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+            }
+          ],
+          "media": [
+            {
+              "src": "https://picsum.photos/id/766/900",
+              "type": "image",
+              "imgAlt": "A nice image"
+            }
+          ]
+        },
+
+
+        {
+          "index": 1,
+          "title": "Go to the first page",
+          "text": "First page",
+          "clickable": true,
+          "list": true,
+          "ctaBlock": true,
+          "ctaText": "Go to the first page",
+          "ctaLink": "/bangbang",
+          "mediaBlock": true,
+          "isCarousel": false,
+          "finePrint": "Fine Print",
+          "listItems": [
+            {
+              "text": "First list item",
+              "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+            },
+            {
+              "text": "Second list item",
+              "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+            },
+            {
+              "text": "Third list item",
+              "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+            }
+          ],
+          "media": [
+            {
+              "src": "https://picsum.photos/id/76/900",
+              "type": "image",
+              "imgAlt": "A nice image"
+            }
+          ]
+        }
+
+        
+      ]
+
+__________________________________________________________________________________________________________________

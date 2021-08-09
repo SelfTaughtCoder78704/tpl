@@ -1,0 +1,104 @@
+{
+    "Page": [
+        {
+           "block": "TitleBlock",
+           "kicker": "This is the kicker",
+           "text": "This is the title", 
+           "subtitle": "This is the subtitle",
+           "finePrint": "This is the fine print"
+       },
+       {
+          "block": "MediaBlock",
+          "mediaItems": [
+            {
+              "type": "image",
+              "src": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+            }
+          ]
+       },
+       {
+        "block": "Actions",
+        "titleBlock": true,
+        "titleBlockTitle": "Action One Title",
+        "titleBlockText": "Action One Text",
+        "titleFinePrint": "Fine Print",
+        "bullets": true,
+        "focusAt": 0,
+        "id": "action-one",
+        "actionIsCarousel": true,
+        "classes": "MyClass",
+        "perView": 2,
+        "actionSlideType": "carousel",
+        "actions": [
+          {
+            "index": 0,
+            "title": "Go to the first page",
+            "text": "First page",
+            "clickable": false,
+            "list": true,
+            "ctaBlock": true,
+            "ctaText": "Go to the first page",
+            "ctaLink": "/bangbang",
+            "mediaBlock": true,
+            "isCarousel": false,
+            "finePrint": "Fine Print",
+            "listItems": [
+              {
+                "text": "First list item",
+                "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+              },
+              {
+                "text": "Second list item",
+                "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+              },
+              {
+                "text": "Third list item",
+                "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+              }
+            ],
+            "media": [
+              {
+                "src": "https://picsum.photos/id/766/900",
+                "type": "image",
+                "imgAlt": "A nice image"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "title": "Go to the first page",
+            "text": "First page",
+            "clickable": true,
+            "list": true,
+            "ctaBlock": true,
+            "ctaText": "Go to the first page",
+            "ctaLink": "/bangbang",
+            "mediaBlock": true,
+            "isCarousel": false,
+            "finePrint": "Fine Print",
+            "listItems": [
+              {
+                "text": "First list item",
+                "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+              },
+              {
+                "text": "Second list item",
+                "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+              },
+              {
+                "text": "Third list item",
+                "icon": "https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=6&m=496603666&s=170667a&w=0&h=CdaZL0kvQieOEjq0Vt8gLzlZvVQDKtiqZEx32WDDEYs="
+              }
+            ],
+            "media": [
+              {
+                "src": "https://picsum.photos/id/76/900",
+                "type": "image",
+                "imgAlt": "A nice image"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}

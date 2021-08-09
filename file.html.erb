@@ -1,0 +1,51 @@
+<%- 
+  id            = content['id']
+  classes       = content['classes'] || ""
+  actions       = content['actions']  
+  is_carousel   = content['carousel']
+  state         = []
+  state        += ['details-carousel', 'is-carousel-on-mobile'] if is_carousel
+  section_index = @content.content.index(content).to_s if @content.content.include?(content)
+%>
+
+<section 
+  class="actions-section page-section <%= classes %>"
+  data-index="<%= section_index %>"
+  <%if id%>id="<%=id%>"<%end%>
+  >
+  <div class="container">  
+    <%= render partial: 'custom/shared/title_block', locals: { content: content } %>
+    <% if actions %>
+      <div class="actions-content grid columns-<%= actions.count %> <%= state.join(' ') %>">
+
+      <% content['actions'].each_with_index do |action, index| %>
+        <%-
+          action_id     = action['id']
+          action_class  = action['classes'] || ""
+        %>
+       
+        <div class="action index-<%= index %> <%= action_class %>" <%- if action_id %>id="<%= action_id %>"<% end -%>>
+
+          <% if action['clickable'] %>
+            <a href="<%= action['cta_link'] || @cta_link %>">
+          <% end %>
+          
+          <%= render partial: 'custom/shared/media_block', locals: { content: action } %>
+          <% if action['title'] %><h4 class="action-title"><%= action['title'].html_safe %></h4><% end %>
+          <% if action['text']  %><p  class="action-text" ><%= action['text'].html_safe  %></p ><% end %>
+          <% if action['list_items'] %>
+            <%= render partial: 'custom/shared/list_block', locals: { content: action } %>
+          <% end %>
+          <% if action['clickable'] %>
+            </a>
+          <% end %>
+          <%= render partial: 'custom/shared/cta_block', locals: { content: action, small: true } %>
+        
+        </div>
+      <% end %>
+
+      </div>
+    <% end %>
+
+  </div>
+</section>

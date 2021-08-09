@@ -1,0 +1,42 @@
+***** TitleBlock *****
+**********************
+
+The TitleBlock takes in the following properties:
+_________________________________________________
+
+kicker,
+title,
+subtitle,
+finePrint,
+text,
+classes,
+id
+
+How it looks:
+
+<TitleBlock 
+kicker="Kicker" 
+title="Title" 
+subtitle="Subtitle" 
+finePrint="Fine Print" 
+classes="someClass youGot" 
+id="identified"
+/>
+_________________________________________________
+
+
+Is accepted by default in the following Components:
+
+Actions:
+
+    How to use in Actions as a Title for the Action Section:
+        <Actions 
+        titleBlock = true (or false)
+        titleBlockTitle = "string";
+        titleBlockText = "string";
+        titleFinePrint = 'string'
+        NEED TO GO BACK TO ACTIONS AND ADD THE REST
+        ...
+        />
+
+_________________________________________________

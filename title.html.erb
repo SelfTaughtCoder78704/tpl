@@ -1,0 +1,22 @@
+<%-
+  kicker     = content['kicker']
+  title      = content['title']
+  subtitle   = content['subtitle']
+  text       = content['text']
+  fine_print = content['fine_print']
+  
+  # classes and id can only be defined when this block is rendered in a longform section body
+  if defined?(longform_content)
+    classes  = longform_content['classes']
+    id       = longform_content['id']
+  end    
+%>
+<%- if kicker || title || subtitle || text || fine_print %>
+<div class="title-block <%= classes %>" <%- if id %>id="<%= id %>"<% end -%>>
+  <%- if kicker     %><h6><%= kicker.html_safe   %></h6><% end -%>
+  <%- if title      %><h2><%= title.html_safe    %></h2><% end -%>
+  <%- if subtitle   %><h3><%= subtitle.html_safe %></h3><% end -%>
+  <%- if text       %><p class="lead"><%= text.html_safe %></p><% end -%>
+  <%- if fine_print %><small><%= fine_print.html_safe %></small><% end -%>
+</div>
+<% end -%>

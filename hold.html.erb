@@ -1,0 +1,34 @@
+<%- 
+  cta_text        = content['cta_text']
+  cta_link        = content['cta_link'] || @cta_link 
+  cta_fine_print  = content['cta_fine_print']
+  trackable       = content['trackable'] || content['template'] # default to template name
+  interaction     = content['interaction'] || 0 # don't override 'cta-click'
+  cta_rel         = content['cta_rel']
+  small           = false || small
+
+   # classes and id can only be defined when this block is rendered in a longform section body
+  if defined?(longform_content)
+    classes       = longform_content['classes']
+    id            = longform_content['id']
+  end    
+%>
+<%- if cta_link && cta_text %>
+<div class="cta-block <%= classes %>" <%- if id %>id="<%= id %>"<% end -%>>
+  <div class="cta-wrapper">
+    <a 
+      href="<%= cta_link %>" 
+      class="btn<%= small ? ' btn-small' : '' %>" 
+      data-trackable="<%= trackable %>" 
+      data-interaction="<%= interaction %>" 
+      <% if cta_rel %> rel="<%= cta_rel %>" <% end %>
+    >
+      <%= cta_text.html_safe %>
+    </a>
+
+    <% if cta_fine_print %>
+      <small class="cta-fine-print"><%= cta_fine_print.html_safe %></small>
+    <% end %>
+  </div>
+</div>
+<% end -%>
